@@ -7,12 +7,18 @@
 		<div class="col-10 p-5 shadow">
 			<%= form_with(scope: :mail, url: emails_path, method: :post, local: true) do |f| %>
 				<div class="row">
-					<div class="col-12">
+					<div class="col-8">
 						<div class="form-group">
 							<%= f.label 'to', class: 'form-label' %>
 							<%= f.text_field :email, class: 'form-control' %>			
 						</div>
-					</div>	
+					</div>
+					<div class="col-4">
+						<div class="form-group">
+							<%= f.label ' ', class: 'form-label' %>
+							<%= f.file_field 'excelData', style: 'padding-top: 10px', class: 'form-control-file overflow-hidden' %>		
+						</div>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-8">
