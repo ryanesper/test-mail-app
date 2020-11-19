@@ -1,6 +1,7 @@
 class TestMailer < ApplicationMailer
-
+	
 	def welcome_email
-		mail(to: params[:sendTo], subject: 'Test Email')
+		@message = params[:message]
+		mail(to: params[:email], subject: params[:subject])
 	end
 end
